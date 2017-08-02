@@ -1,0 +1,5 @@
+/* entert.wxss */
+@import '../ruzhu/ruzhu.wxss';
+.red{
+ color:#ff0700;
+}

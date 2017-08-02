@@ -1,0 +1,7 @@
+/* pages/shop_mes/store_address/address.wxss */
+@import '../store_name/name.wxss';
+@import '../../css/css.wxss';
+.sel-icon {
+  width: 18rpx;
+  height: 24.6rpx;
+}

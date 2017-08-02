@@ -1,0 +1,116 @@
+<!-- 店铺信息 -->
+<view class="container">
+  <view class="shop-top">
+    <view class="shop-mes">店铺信息</view>
+    <!-- 上传照片部分 -->
+    <view class="mes-sup">
+      <!-- 点击添加-->
+      <view class="add-mes" catchtap="getPic">
+        <image class="add-on" src="/images/shop_mes/icon_add.png"></image>
+      </view>
+      <scroll-view class="scroll-image" scroll-x>
+        <!-- 单张照片 -->
+        <block wx:for="{{tempFilePaths}}">
+          <view class="shop-images" style="left:{{230*index}}rpx;top:-{{9+148*index}}rpx">
+            <image class="img" src="{{item}}"></image>
+            <view class="det-wrap" catchtap="detPic" data-id="{{index}}">
+              <image class="det" src="/images/shop_mes/icon_delete.png"></image>
+            </view>
+          </view>
+        </block>
+        <!-- 单张照片 end -->
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 店铺详情信息 -->
+
+  <view class="shop-detail" catchtap="bindHeadPor">
+    <view class="de-left">
+     店铺头像
+    </view>
+    <view class="de-rights" >
+      <view class="de-center mr"  style="box-shadow:0 0 5rpx #ccc;">
+        <image src="{{heaPic?heaPic:'/images/index/icon_touxiang.png'}}"></image>
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 店铺详情信息 -->
+  <view class="shop-detail" catchtap="bindName" data-data="{{farmName}}">
+    <view class="de-left">店铺名称</view>
+    <view class="de-rights">
+      <view class="center-font1 mr">
+        {{farmName}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="shop-detail" catchtap="alterAdd">
+    <view class="de-left">店铺地址</view>
+    <view class="de-rights" data-data="{{item.text}}">
+      <view class="center-font1 mr">
+        {{address+addEd}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="shop-detail" catchtap="bindTime" data-timeS="{{businessTimeS}}" data-timeE="{{businessTimeE}}">
+    <view class="de-left">营业时间</view>
+    <view class="de-rights">
+      <view class="center-font1 mr">
+        {{businessTimeS}}-{{businessTimeE}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="shop-detail" catchtap="alterTag">
+    <view class="de-left">标签</view>
+    <view class="de-rights">
+      <view class="center-font1 mr">
+        {{codeNames}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="shop-detail" catchtap="bindName" data-price="{{storePrice}}">
+    <view class="de-left">价格</view>
+    <view class="de-rights">
+      <view class="center-font1 mr">
+        {{storePrice}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="shop-detail" catchtap="alterGame">
+    <view class="de-left">游戏</view>
+    <view class="de-rights" >
+      <view class="center-font1 mr">
+        {{gameNames}}
+      </view>
+      <view class="de-right">
+        <image src="/images/shop_mes/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 退出登入  -->
+  <button class="btn tui" catchtap="bindLogin">退出登录</button>

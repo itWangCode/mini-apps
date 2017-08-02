@@ -1,0 +1,138 @@
+<!--  入驻 -->
+<view class="container">
+  <form bindsubmit="regFish">
+    <view class="stepo">1.店铺信息</view>
+    <view class="item" style="position:relative;">
+      <view class="title">店铺名称</view>
+      <input placeholder="请输入店铺名称" placeholder-class=" base {{isfarmName?'red':'pal' }}" class="input" name="farmName" value="" />
+      <block wx:if="{{isfarmName}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item">
+      <view class="title">店铺地址</view>
+      <view class="address">
+        <picker bindchange="bindPicProvince" value="{{privIndex}}" range="{{priv}}" range-key="{{'name'}}" mode="selector" name="proid">
+          <view class="picker" style=" margin-right: 20rpx;">
+            <block wx:if="{{priv[privIndex].name}}">
+              {{ priv[privIndex].name}}
+            </block>
+            <block wx:else>
+              省
+            </block>
+          </view>
+        </picker>
+        <picker bindchange="bindPicCity" value="{{citIndex}}" range="{{cit}}" range-key="{{'name'}}" name="cityid">
+          <view class="picker" style="margin-right: 20rpx;">
+            <block wx:if="{{cit[citIndex].name}}">
+              {{cit[citIndex].name}}
+            </block>
+            <block wx:else>
+              市
+            </block>
+          </view>
+        </picker>
+        <picker bindchange="bindPicArea" value="{{areaIndex}}" range="{{areas}}" range-key="{{'name'}}" name="areaid">
+          <view class="picker">
+            <block wx:if="{{ areas[areaIndex].name}}">
+              {{areas[areaIndex].name}}
+            </block>
+            <block wx:else>
+              区
+            </block>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="item" style="position:relative;">
+      <!--街道地址 -->
+      <input type="text" placeholder="请输入具体街道地址" placeholder-class="base {{isAddress?'red':'pal' }}" class="jiedao" name="address" />
+      <block wx:if="{{isAddress}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item">
+      <view class="title">店铺标签</view>
+      <form bindsubmit="changTip">
+        <view class="add-btn">
+          <block wx:if="{hasTigList}}">
+            <form bindsubmit="bindEditTip">
+              <button class="tigs" form-type="submit">{{tagList}}</button>
+            </form>
+          </block>
+          <block wx:if="{{hasTIg}}">
+            <button class="redirect" form-type="submit">点击添加</button>
+          </block>
+        </view>
+      </form>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title">店铺照片</view>
+      <view class="add-btn">
+        <view wx:if="{{hasPic}}" class="edit-wrap">
+          <view class="pic">已上传{{lengthPic}}张</view>
+          <view class="edit" catchtap="editPic">编辑</view>
+        </view>
+        <block>
+          <button wx:if="{{hasPicBtn}}" class="redirect" catchtap="getPic">点击添加</button>
+          <block wx:if="{{isPic}}">
+            <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+          </block>
+        </block>
+      </view>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title">店铺电话</view>
+      <input type="number" placeholder="请输入手机号码" placeholder-class="base {{isPhone?'red':'pal' }}" class="input" bindinput="checkPhoneNum" name="phone" maxlength="11" />
+      <block wx:if="{{isPhone}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item">
+      <view class="title1">店铺营业时间</view>
+      <view class="address">
+        <picker bindchange="bindTimeChange" value="{{time}}" mode="time" start="00:00" end="24:00" name="businessTimeS">
+          <view wx:if="{{time}}" class="picker">
+            {{time}}
+          </view>
+          <view class="picker" wx:if="{{hastime}}">
+            00:00
+          </view>
+        </picker>
+        <view style="font-size:28rpx;color:#aaa;line-height:70rpx;height:70rpx;margin:0 20rpx;"> 至 </view>
+        <picker bindchange="bindTimeChange1" value="{{time1}}" mode="time" start="00:00" end="24:00" name="businessTimeE">
+          <view wx:if="{{time1}}" class="picker">
+            {{time1}}
+          </view>
+          <view class="picker" wx:if="{{hastime1}}">
+            00:00
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title">店铺价钱</view>
+      <input type="digit" placeholder="请输入店铺价钱(元)" placeholder-class="base {{isPrice?'red':'pal' }}" class="input" name="storePrice" />
+      <block wx:if="{{isPrice}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item">
+      <view class="title">店内游戏</view>
+      <form bindsubmit="getGrames">
+        <view class="add-btn">
+          <block wx:if="{hasGameList}}">
+            <form bindsubmit="bindEditGame">
+              <button class="tigs" form-type="submit">{{gameList}}</button>
+            </form>
+          </block>
+          <block wx:if="{{hasGame}}">
+            <button class="redirect" form-type="submit">点击添加</button>
+          </block>
+        </view>
+      </form>
+    </view>
+    <button class="btn" formType="submit">下一步</button>
+    <!-- 第一步 end -->
+  </form>
+</view>

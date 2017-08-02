@@ -1,0 +1,64 @@
+/* pages/issue_act/activity.wxss */
+
+.act-wrap {
+  margin: 40rpx 32rpx;
+}
+
+.already {
+  font-size: 28rpx;
+  margin-bottom: 32rpx;
+  display: inline-block;
+}
+
+.ite-act {
+  height: 474rpx;
+  border-radius: 8rpx;
+  margin-bottom: 60rpx;
+}
+
+.act-time {
+  margin-left: 20rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #f1f2f6;
+}
+
+.act-wraps {
+  height: 274rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  border-bottom: 2rpx solid #f1f2f6;
+}
+
+.date-act {
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+}
+
+.data-tip {
+  width: 96rpx;
+}
+
+.color-60 {
+  color: #606060;
+}
+
+.data-cen {
+  color: #aaa;
+}
+
+.op-btn {
+  height: 118rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 32rpx;
+}
+.ei-color{
+  color:#66b1ff;
+}

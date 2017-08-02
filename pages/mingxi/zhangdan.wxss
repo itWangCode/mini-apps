@@ -1,0 +1,71 @@
+page{
+  background-color: #F1F2F6;
+}
+
+.container {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.account-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f2f6;
+  height: 116rpx;
+}
+
+.item-base {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #606060;
+}
+
+.time-wrap .time {
+  font-size: 32rpx;
+  line-height: 38rpx;
+}
+
+.time-wrap .data {
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+
+.account-wrap {
+  width: 400rpx;
+}
+
+.account-wrap .price {
+  font-size: 36rpx;
+  line-height: 38rpx;
+}
+
+.account-wrap .name {
+  font-size: 28rpx;
+  color: #aaa;
+  line-height: 34rpx;
+}
+
+.type {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40rpx;
+  line-height: 72rpx;
+  text-align: center;
+}
+
+.bg1 {
+  background-color: #7188ff;
+}
+
+.bg2 {
+  background-color: #ff9d07;
+  font-size: 48rpx;
+}
+

@@ -1,0 +1,43 @@
+<!-- 店铺地址 -->
+<view class="container">
+
+  <view class="sing-wrap bg" catchtap="changeAdd">
+    <view class="store-name clo-c41">{{address}}
+    </view>
+    <view class="clear">
+      <image class="sel-icon" src="/images/shop_mes/icon_right.png"></image>
+    </view>
+  </view>
+
+  <form bindsubmit="bindSave">
+    <view class="sing-wrap bg">
+      <input class="store-name clo-c41" value="{{edtAdd}}" type="text" name="address" confirm-type="done" />
+      <view class="clear" catchtap="onbindReset">
+        <icon type="clear" size="13" color="#D8D8D8" />
+      </view>
+    </view>
+    <button form-type="submit" class="btn">保存</button>
+  </form>
+</view>
+
+<!-- 地区选择 -->
+<block wx:if="{{hasAddress}}">
+  <view class="bg-w"></view>
+  <view class="time-wrap">
+    <view class="chanbtn">
+      <view class="qu" catchtap="queding">取消</view>
+      <view class="que" catchtap="queding" data-id="1">确定</view>
+    </view>
+    <picker-view indicator-style="height:34px;" style="width: 100%; height:241px;" value="{{areaValue}}" bindchange="changeArea">
+      <picker-view-column>
+        <view style="line-height:34px;text-align:center;" wx:for="{{provinces}}" wx:key="unique" class="addr-item">{{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="unique" style="line-height:34px;text-align:center;">{{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="unique" style="line-height:34px;text-align:center;">{{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</block>

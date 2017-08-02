@@ -1,0 +1,31 @@
+<template name="sin-recode">
+  <view class="sin-wrap">
+    <view class="sing-wrap bg">
+      <view class="mes">
+      <block wx:if="{{his==1}}">
+        <text class="name clo-60">{{gameName}}{{pinNum}}人局</text>
+      </block>
+      <block wx:else>
+        <text class="name clo-60">{{gameName}}</text>
+      </block>       
+        <text class="time clo-60">{{activitTime}}</text>
+      </view>
+      <view class="img-wrap">
+        <block wx:for="{{user_list}}">
+          <image class="sing-img" style="left:{{40*index}}rpx;z-index:{{index+1}}" src="{{item.headImgUrl}}"></image>
+        </block>
+      </view>
+      <view class="per-num clo-60">
+      <block wx:if="{{his==1}}">
+        <view>核对{{usedCount}}人</view>
+        </block>
+        <block wx:else>
+         <view>{{pinNum}}人局缺{{pinNumHave}}人</view>
+        </block>
+        <view class="me-wr">
+          <text class="icon-me">¥</text>{{pinPrice}}
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

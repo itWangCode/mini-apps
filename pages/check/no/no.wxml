@@ -1,0 +1,9 @@
+<!-- 无效状态 -->
+<view class="container">
+  <view class="no-wrap">
+    <image src="/images/check/icon_defeat.png" style="width:162rpx;height:212rpx;"></image>
+    <view class=" clo-c41 ch">此消费码无效</view>
+    <view class="clo-a chec-fon" style="font-size:28rpx;margin-top:12rpx;">可能输入有误、队伍未组成、未到使用有效时间</view>
+    <button class="btn" catchtap="restInput">重新输入</button>
+  </view>
+</view>

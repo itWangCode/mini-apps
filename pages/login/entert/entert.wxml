@@ -1,0 +1,46 @@
+<!--entert.wxml-->
+<view class="container">
+  <form bindsubmit="regFishR">
+    <view class="stepo">3.资质信息</view>
+    <view class="item1">
+      <view class="item-left" wx:if="{{hasPicZ}}">
+        <image src="{{picPath}}" style="width:150rpx;height:150rpx;"></image>
+      </view>
+      <view class="item-left" wx:if="{{picBgZ}}" style="background-color:#999;">
+      </view>
+      <view class="item-right">
+        <view style="color:#aaa;">请上传营业执照照片</view>
+        <view style="color:#66B1FF;margin-top:83rpx;" catchtap="scPicZ">点击上传</view>
+      </view>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title2">执照名称</view>
+      <input placeholder="请输入执照名称" placeholder-class="base {{isCName?'red':'pal' }}" class="input" name="CName" />
+      <block wx:if="{{isCName}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title2">执照编号</view>
+      <input type="text" placeholder="请输入执照注册编号" placeholder-class="base {{isCCode?'red':'pal' }}" class="input" name="CCode" />
+      <block wx:if="{{isCCode}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title2">执照所在地</view>
+      <input type="text" placeholder="请输入执照所在地" placeholder-class="base  {{isCAddress?'red':'pal' }}" class="input" name="CAddress" />
+      <block wx:if="{{isCAddress}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <view class="item" style="position:relative;">
+      <view class="title2">执照有效期</view>
+      <input placeholder="请输入年月，例：2017-08" placeholder-class="base {{isCYear?'red':'pal' }}" class="input" name="CYear" />
+      <block wx:if="{{isCYear}}">
+        <image class="er-img" src="/images/icon.png" style="width:40rpx;height:40rpx;"></image>
+      </block>
+    </view>
+    <button class="btn" form-type="submit">完成</button>
+  </form>
+</view>

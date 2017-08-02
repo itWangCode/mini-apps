@@ -1,0 +1,93 @@
+/* pages/mes_ping/index.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+page {
+  height: 100%;
+  position: relative;
+}
+
+.mes-tit {
+  padding: 0 32rpx;
+  background-color: #fff;
+  color: #606060;
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.mes-cont {
+  padding: 0 32rpx;
+}
+
+.tilte {
+  margin-top: 40rpx;
+  font-size: 32rpx;
+  margin-bottom: 12rpx;
+}
+
+.position {
+  margin: 40rpx 0;
+}
+
+.yijian {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  color: #66b1ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 联系电话的弹框 */
+
+.contact-bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.contact-wrap {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.contact-pit {
+  border-radius: 4px;
+  margin-bottom: 10rpx;
+}
+
+.contact-base {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #f1f2f6;
+  background-color: #fff;
+ 
+}
+.contact-pit .font{
+  color:#606060;
+}
+.number{
+  color: #66b1ff;
+}
+
+.contact-wrap .cancel {
+  border-radius: 4px;
+  margin-bottom: 10rpx;
+   color: #66b1ff;
+}

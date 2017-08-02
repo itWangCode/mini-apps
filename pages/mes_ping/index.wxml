@@ -1,0 +1,50 @@
+<!-- 联系平台 -->
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="container">
+  <view class="mes-tit">
+    杭州叨叨狼科技有限公司
+    <view style="color:#66B1FF;float:right;" catchtap="bindContact">联系</view>
+  </view>
+  <view class="mes-cont">
+    <view class="tilte">常见问题</view>
+
+    <view class="position clo-60">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      <!--<view style="font-size:30rpx;margin-bottom:20rpx;">问：我明天不上班，店里没人有人来玩怎么办？</view>
+      <view style="font-size:28rpx;">答：你好，请您在发布任务中点击删除发布即可</view>
+    </view>
+    <view class="position clo-60">
+      <view style="font-size:30rpx;margin-bottom:20rpx;">问：我想删除队伍哪里可以做到？</view>
+      <view style="font-size:28rpx;">答：你好，请您在发布任务中点击删除发布即可</view>
+    </view>
+    <view class="position clo-60">
+      <view style="font-size:30rpx;margin-bottom:20rpx;">问：我想换银行卡怎么办？</view>
+      <view style="font-size:28rpx;">答：你好，请您在发布任务中点击删除发布即可</view>
+    </view>
+    <view class="position clo-60">
+      <view style="font-size:30rpx;margin-bottom:20rpx;">问：我想换银行卡怎么办？</view>
+      <view style="font-size:28rpx;">答：你好，请您在发布任务中点击删除发布即可</view>-->
+
+    </view>
+
+  </view>
+
+  <view class="yijian" catchtap="bindfankui">
+    <image src="/images/cont/lianxi.png" style="margin-right:10rpx; width: 44rpx;height: 42rpx;"></image>
+    反馈意见</view>
+</view>
+
+<!-- 联系方式 -->
+<block wx:if="{{hasTel}}">
+  <view class="contact-bg"></view>
+  <view class="contact-wrap">
+    <view class="contact-pit">
+      <view class="contact-base font">联系平台</view>
+      <block wx:for="{{telphoneNumber}}">
+        <view class="contact-base number" catchtap="bindcall" data-tel="{{item}}">{{item}}</view>
+      </block>
+    </view>
+    <view catchtap="bindcancel" class="contact-base cancel">取消</view>
+  </view>
+</block>

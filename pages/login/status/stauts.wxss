@@ -1,0 +1,62 @@
+/* pages/login/status/stauts.wxss */
+
+.container {
+  width: 100%;
+  background-color: #fff;
+  padding: 36rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.dif-wrap {
+  width: 100%;
+  background-color: #f1f2f6;
+  height: 410rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dif-f {
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 26rpx;
+}
+
+.status {
+  width: 100%;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cri-ou {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin-right: 23rpx;
+}
+
+.shen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bor {
+  border: 2rpx solid #66b1ff;
+}
+
+.cri {
+  margin: 8rpx auto;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+}
+
+.line {
+  margin: 8rpx 0;
+  margin-left: 15rpx;
+  width: 2rpx;
+  height: 72rpx;
+}
