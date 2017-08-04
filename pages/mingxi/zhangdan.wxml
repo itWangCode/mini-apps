@@ -37,8 +37,8 @@
           <block wx:if="{{item.type==1}}">+</block>
           {{item.amount}}
         </view>
+        <text wx:if="{{item.type==1}}" class="name">{{item.note}}</text>
         <text wx:if="{{item.type==2}}" class="name">提现至微信账户</text>
-        <text wx:if="{{item.type==1}}" class="name">杭州叨叨狼科技有限公司</text>
       </view>
     </view>
   </block>

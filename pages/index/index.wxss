@@ -1,17 +1,14 @@
 page {
   background-color: #fff;
 }
-
-.container {
-  box-sizing: border-box;
-}
-
 .per-cen-wrap {
+  width:100%;
   background-image: linear-gradient(20deg, #6acdfe 0%, #7188ff 60%, #7187ff 98%, #7187ff 100%);
   padding: 0 58rpx;
   color: #fff;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .per-top {
@@ -20,9 +17,11 @@ page {
 
 .per-top, .per-bottom {
   display: flex;
+  width:100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .per-bottom::before {
@@ -31,13 +30,16 @@ page {
   left: 58rpx;
   top: 184rpx;
   height: 2rpx;
-  width: 100%;
+  width: 692rpx;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .per-bottom::before {
   left: 60rpx;
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2));
   background: linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2));
+  box-sizing: border-box;
 }
 
 .per-bottom {
@@ -64,6 +66,7 @@ page {
   display: flex;
   flex-direction: column;
   width:420rpx;
+  box-sizing: border-box;
 }
 
 .name {
@@ -90,11 +93,12 @@ page {
 
 .single-center {
   width: 630rpx;
-  margin-top: 60rpx;
   display: flex;
   flex-direction: row;
-  margin: 60rpx 60rpx 0;
+  margin: 60rpx auto; 
   flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .single-wrap {

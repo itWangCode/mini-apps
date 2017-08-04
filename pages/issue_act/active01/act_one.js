@@ -101,6 +101,8 @@ Page({
     //添加表单验证
     if (editActive == 1) {//修改活动
       let activInfo = wx.getStorageSync("activInfo");
+      console.log('修改');
+      console.log(activInfo);
       let businessTime = activInfo.businessTime;
       let useMoney = activInfo.useMoney;//价钱
       let week1 = this.data.week1;//周一到周三     
@@ -119,7 +121,7 @@ Page({
         times: businessTime,
         hasEdit: 1,//编辑
         index: index,
-        storePrice: options.storePrice
+        storePrice: activInfo.oldMoney
       });
     } else {
       this.setData({

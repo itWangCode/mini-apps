@@ -103,7 +103,12 @@ Page({
             wx.redirectTo({
               url: 'status/status?gameCode=' + pwd,
             });
-          } else {
+          } else if (info.pinStatus=='4'){
+            wx.redirectTo({
+              url: 'status/status?gameCode=' + pwd+"&no=1",
+            });
+          }
+           else {
             wx.redirectTo({
               url: 'no/no',
             });

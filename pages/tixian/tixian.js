@@ -48,7 +48,7 @@ Page({
       });
       return false
     }
-    if (toAccount1 == 0 || toAccount1 == '') {
+    if (toAccount1 == 0 || toAccount1 == '' || isNaN(toAccount1)) {
       wx.showToast({
         title: '你输入提现金额',
       });
@@ -68,7 +68,7 @@ Page({
             if (res.code == 0) {
 
               let timestamp = new Date().getTime();
-              let mill = timestamp + 3600 * 1000 * 2;
+              let mill = timestamp + 3600 * 1000*24;
               let date = new Date(mill);
               let formatTime1 = formatTime.formatTime(date);
 

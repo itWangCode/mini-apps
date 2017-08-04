@@ -18,14 +18,22 @@ Page({
    */
   onLoad: function (options) {
     let gameCode = options.gameCode;
+    let no=options.no;
     let info = app.globalData.checkinfo;
     let farmId = wx.getStorageSync("farmId");
     console.log(info);
     // info = JSON.parse(info);
+    if (no==1){
+      this.setData({
+      hasStatus:1,
+      });
+    }
+
     this.setData({
       perInfo: info,
       gameCode: gameCode,
     });
+   
   },
   /**
    返回
@@ -41,14 +49,24 @@ Page({
   bindconf: function () {
     let farmId = wx.getStorageSync("farmId");
     let gameCode = this.data.gameCode;
-    wx.showNavigationBarLoading();   
+    wx.showNavigationBarLoading();
     status.checkCode(farmId, gameCode, (res) => {
       if (res.code == 0) {//核消成功
-      wx.hideNavigationBarLoading();
+        wx.hideNavigationBarLoading();
         wx.redirectTo({
           url: '../status02/status',
         });
-      } else {
+      } else if (res.code == 1) {
+        wx.showToast({
+          title: res.message,
+          icon: 'success',
+          duration: 2000,
+        });
+        wx.redirectTo({
+          url: '../no/no',
+        });
+      }
+      else {
         wx.hideNavigationBarLoading();
         wx.showToast({
           title: '核销失败!请重新输入',
@@ -57,7 +75,7 @@ Page({
         });
         wx.redirectTo({
           url: '../no/no',
-        })
+        });
       }
     });
 

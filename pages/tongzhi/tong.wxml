@@ -14,4 +14,3 @@
   <view class="load-more" wx:if="{{hasMore}}"> 加载更多</view>
   <view class="load-more" wx:if="{{!hasMore}}"> 暂无更多数据</view>
 </block>
-<view class="load-more" wx:if="{{hasData}}"> 暂无数据</view>

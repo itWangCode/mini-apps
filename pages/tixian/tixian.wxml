@@ -17,6 +17,6 @@
       </view>
     </view>
     <button class="btn" form-type="submit">提现</button>
-    <view class="time">2小时到账</view>
+    <view class="time">24小时之内到账</view>
   </form>
 </view>

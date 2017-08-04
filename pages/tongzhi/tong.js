@@ -14,7 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hasMore:false,
   },
 
   /**
@@ -23,11 +23,10 @@ Page({
   onLoad: function (options) {
     wx.showNavigationBarLoading();
     const farmId = wx.getStorageSync("farmId");
-    inform.getInformList(farmId, pageIndex, pageSize, (res) => {
-      console.log(res);
+    inform.getInformList(farmId, pageIndex, pageSize, (res) => {     
+      wx.hideNavigationBarLoading();
       if (res.code == 0) {
-        let total = res.list.total;
-       wx.hideNavigationBarLoading();
+        let total = res.list.total;      
         if (total < (pageIndex * pageSize)) {
           this.setData({
             hasMore: false
@@ -41,14 +40,17 @@ Page({
         this.setData({
           informList: res.list.list,
         });
-      } else {
-        wx.hideNavigationBarLoading();
+      } else {        
         wx.showToast({
           title: '获取信息失败！',
         });
       }
     });
 
+  },
+  onUnload:function(){
+    pageIndex=1;
+    console.log('关闭');
   },
 
 
@@ -73,15 +75,18 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    let hasMore = this.data.hasMore;
     if (hasMore) {
       pageIndex++;//下一页
       wx.showNavigationBarLoading();
+      let farmId = wx.getStorageSync("farmId");
       inform.getInformList(farmId, pageIndex, pageSize, this._doInformList);
       console.log('调用了方法');
-
     }
   },
   _doInformList: function (res) {
+    wx.hideNavigationBarLoading();
+
     if (res.code == 0) {
       let informList = res.list.list;
       let lenght = informList.length;     
@@ -105,9 +110,7 @@ Page({
         this.setData({
           hasData: true,//无数据
         });
-
       }
-
 
     }
   },

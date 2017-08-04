@@ -26,11 +26,13 @@ page {
 }
 
 .position {
-  margin: 40rpx 0;
+  margin-top:40rpx;
+  margin-bottom:140rpx;
+
 }
 
 .yijian {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;

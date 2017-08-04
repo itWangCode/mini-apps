@@ -18,8 +18,7 @@
       <view class="f-s1" catchtap="bindDeposit">{{userInfo.cashBalance}}元</view>
       <view class="f-s2" catchtap="bindming">明细</view>
       <view class="f-s2" catchtap="bindti">提现</view>
-    </view>
-    <view class="cash-bottom"></view>
+    </view>   
   </view>
   <!-- header end-->
   <!-- section -->
