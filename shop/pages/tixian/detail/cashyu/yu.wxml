@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="account">账户余额</view>
+  <view class="cash">{{cashYu}}</view>
+  <button class="btn" catchtap="bindTiXin">提现</button>
+  <view class="account-name">已绑定微信账户:{{fWeixin}}</view>
+  <view catchtap="bindmingxi" class="mingxi">查看账户余额明细 ></view>
+</view>

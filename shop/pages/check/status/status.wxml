@@ -1,0 +1,38 @@
+<!--pages/check/status/status.wxml-->
+<view class="container">
+  <view class="wrap bg">
+    <view class="icon">
+      <image src="{{perInfo.headImagUrl}}" style="width:90rpx;height:90rpx;"></image>
+    </view>
+    <view class="content">
+      <view class="cont-top">
+        <view class="user">用户:{{perInfo.nickName}}</view>
+        <view class="time clo-a">{{perInfo.addTime}}</view>
+      </view>
+      <view class="cont-bot">{{perInfo.farmName}}</view>
+    </view>
+    <block wx:if="{{perInfo.isUsed==1}}">
+      <view style="font-size:28rpx;color:#66B1FF;">
+        已核对
+      </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{perInfo.pinStatus=='4'}}">
+        <view style="font-size:28rpx;color:red;">
+          已过期
+        </view>
+      </block>
+      <block wx:else>
+        <view style="font-size:28rpx;color:#57D81A;">
+          待使用
+        </view>
+      </block>
+    </block>
+  </view>
+  <block wx:if="{{perInfo.isUsed==1 || perInfo.disStatus=='已过期'}}">
+    <button class="btn" catchtap="bindback">返回</button>
+  </block>
+  <block wx:else>
+    <button class="btn" catchtap="bindconf">确认核对</button>
+  </block>
+</view>

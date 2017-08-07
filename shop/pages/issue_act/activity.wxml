@@ -1,0 +1,43 @@
+<!-- 发布活动 -->
+<view class="container">
+  <button class="btn {{hasClick?'active':''}}" style="margin-top: 38rpx;" catchtap="addActive">新建活动</button>
+  <block wx:if="{{hasList}}">
+    <view class="act-wrap">
+      <text class="already color-60">已发布</text>
+
+      <!-- 一个 -->
+      <block wx:for="{{list}}">
+        <view class="ite-act bg">
+          <view class="act-time data-cen ">{{item.addTime}}</view>
+          <view class="act-wraps">
+            <view class="date-act">
+              <label class="data-tip">日期:</label>
+              <block wx:if="{{item.useDate}}">
+                <view class="data-cen">{{item.useDate}}</view>
+              </block>
+              <block wx:if="{{item.week}}">
+                <view class="data-cen">{{item.week}}</view>
+              </block>
+            </view>
+            <view class="date-act">
+              <label class="data-tip">时间:</label>
+              <view class="data-cen">营业时间（{{item.businessTime}}）</view>
+            </view>
+            <view class="date-act">
+              <label class="data-tip color-60">价格:</label>
+              <view class="data-cen">¥ {{item.useMoney}}</view>
+            </view>
+          </view>
+          <view class="op-btn">
+            <view  class="ei-color" style="margin-right:120rpx;" catchtap="edit" data-activity-id="{{item.activityId}}">编辑</view>
+            <view style="margin-right:88rpx;color:#414141;" catchtap="cancelActive" data-activity-id="{{item.activityId}}">取消</view>
+          </view>
+        </view>
+      </block>
+      <!-- 一个 -->
+    </view>
+  </block>
+
+
+
+</view>

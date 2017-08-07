@@ -1,0 +1,10 @@
+<!--  其他活动 start-->
+<view class="container">
+  <image  class="imag" src="/images/other/other.png" style="height:212rpx;width:162rpx;margin:70rpx auto 30rpx;"></image>
+  <view class="other-font">
+    活动通道暂时关闭，如需了解，
+    <view class="f" catchtap="bindcontact">请联系平台</view>
+  </view>
+
+</view>
+<!-- 消息中心 end -->
