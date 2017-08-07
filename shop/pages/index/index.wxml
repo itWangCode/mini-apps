@@ -1,0 +1,36 @@
+<!-- 首页 -->
+<view class="container">
+  <!--  header start-->
+  <view class="per-cen-wrap">
+    <view class="per-top" catchtap="onbindMes">
+      <view>
+        <image class="per-icon" src="{{userInfo.headLogo?userInfo.headLogo:'/images/shop_mes/icon_per.png'}}"></image>
+      </view>
+      <view class="top-center">
+        <text class="name">{{userInfo.farmName}}</text>
+        <text class="adress">{{addressD+userInfo.address}}</text>
+      </view>
+      <view class="per-rig">
+        <image src="/images/index/icon_right.png"></image>
+      </view>
+    </view>
+    <view class="per-bottom">
+      <view class="f-s1" catchtap="bindDeposit">{{userInfo.cashBalance}}元</view>
+      <view class="f-s2" catchtap="bindming">明细</view>
+      <view class="f-s2" catchtap="bindti">提现</view>
+    </view>   
+  </view>
+  <!-- header end-->
+  <!-- section -->
+  <view class="single-center">
+    <block wx:for="{{singCenter}}">
+      <view class="single-wrap {{item.hasClick?'active':''}}" bindtap="{{item.bind}}" data-id="{{index}}">
+        <view class="img-wrap">
+          <image src="{{item.src}}"></image>
+        </view>
+        <text class="sin-font">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- section end-->
+</view>

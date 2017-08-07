@@ -1,0 +1,5 @@
+<view class="no-wrap">
+  <image src="/images/ruzhu/icon_success.png" style="width:162rpx;height:212rpx;"></image>
+  <view class="clo-c41 chec-fon ch">核对成功</view>
+  <button class="btn" catchtap="bindcontitue">继续输入</button>
+</view>

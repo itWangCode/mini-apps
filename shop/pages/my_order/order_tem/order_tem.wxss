@@ -1,0 +1,68 @@
+/* pages/my_order/order_tem/order_tem.wxss */
+
+.sin-wrap {
+  width: 100%;
+}
+
+.sing-wrap {
+  margin: 0 auto;
+  width: 686rpx;
+  height: 350rpx;
+  box-sizing: border-box;
+  border-radius: 4rpx;  
+}
+
+.sing-wrap .mes {
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  height: 126rpx;
+  margin-left: 22rpx;
+  border-bottom: 2rpx solid #f1f2f6;
+  justify-content: center;
+}
+
+.name {
+  font-size: 36rpx;
+  line-height: 38rpx;
+}
+
+.time {
+  font-size: 24rpx;
+  line-height: 28rpx;
+  margin-top:3rpx;
+}
+
+.img-wrap {
+  margin-left: 22rpx;
+  display: flex;
+  flex-direction: row;
+  height: 116rpx;
+  position: relative;
+}
+
+.img-wrap image {
+  position: absolute;
+  top: 50%;
+  margin-top: -28rpx;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+}
+
+.per-num {
+  width: 646rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #f1f2f6;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  padding: 24rpx 22rpx;
+  box-sizing: border-box;
+}
+
+.icon-me {
+  margin-right: 10rpx;
+}

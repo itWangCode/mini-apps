@@ -1,0 +1,15 @@
+<!-- 标签 -->
+<view class="container">
+  <text class="tag-til clo-c41">游戏选择</text>
+  <view class="tag-wrap">
+    <view class="item-tag {{item.check ? 'active1':'noactive'}}"   wx:for="{{gameList}}" catchtap="changeGameId" data-cateid="{{item.cateId}}">{{item.cateName}}</view>  
+  </view>
+
+  <view class="prompt">
+    请勾选店内能进行的游戏类型
+  </view>
+
+  <button class="complete" catchtap="fished"> 完成</button>
+
+
+</view>

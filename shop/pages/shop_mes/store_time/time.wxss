@@ -1,0 +1,2 @@
+/* pages/shop_mes/store_time/time.wxss */
+@import '../store_address/address.wxss';

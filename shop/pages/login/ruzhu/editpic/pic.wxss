@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+}
+
+.pic-box {
+  width: 100%;
+  padding: 40rpx 62rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pic-item {
+  width: 280rpx;
+  height: 280rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+
+.item {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.del-box {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn {
+  margin-top: 76rpx;
+  width: 238rpx;
+  margin-bottom: 60rpx;
+}

@@ -1,0 +1,60 @@
+<import src="order_tem/order_tem.wxml" />
+
+<!-- 我的订单 -->
+<view class="container">
+  <!-- tab 选项卡 -->
+  <view class="tab-wrap bg">
+    <view class="tab" bindtap="onbindChaCen" data-id="0">
+      <text class="{{currentId==0 ? 'active1':'' }}">正在组队</text>
+    </view>
+    <view class="tab" bindtap="onbindChaCen" data-id="1">
+      <text class="{{currentId==1 ? 'active1':'' }}">组队成功</text>
+    </view>
+  </view>
+  <!-- tab 选项卡 end -->
+
+  <!-- 选卡内容 -->
+
+
+  <!--  历史清单 -->
+  <block wx:if="{{hasHis}}">
+    <view class="his-wrap">
+      <text class="font-s clo-60 tips">只保留最近30天</text>
+      <block wx:for="{{hisAllList}}">
+        <block wx:if="{{item.hasTody}}">
+          <text class="his-time  font-s">{{item.Tody}}</text>
+        </block>
+        <block wx:else>
+          <text class="his-time  font-s">{{item.activitTime}}</text>
+        </block>
+        <view class="tep-wrap">
+          <template is="sin-recode" data="{{...item,his:1}}">
+          </template>
+        </view>
+      </block>
+      <view wx:if="{{hasMoreH}}" class="hasMore">
+        加载更多
+      </view>
+      <view wx:else class="hasMore">
+        暂无更多数据
+      </view>
+    </view>
+  </block>
+  <!--  正在组队 今天-->
+  <block wx:if="{{hasGroup}}">
+    <view class="joining-wrap" wx:for="{{listAll}}">
+      <view class="tep-wrap">
+        <template is="sin-recode" data="{{...item}}">
+        </template>
+      </view>
+    </view>
+    <view wx:if="{{hasMore}}" class="hasMore">
+      加载更多
+    </view>
+    <view wx:else class="hasMore">
+      暂无更多数据
+    </view>
+  </block>
+
+
+</view>

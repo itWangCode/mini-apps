@@ -1,0 +1,48 @@
+/* pages/check/status/status.wxss */
+
+.wrap {
+  width: 100%;
+  margin-bottom: 72rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 49rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+}
+.user{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:180rpx;
+}
+
+.time {
+  margin-left: 15rpx;
+  font-size: 24rpx;
+}
+
+.cont-bot {
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  color: #606060;
+}
