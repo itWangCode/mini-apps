@@ -3,5 +3,5 @@ class Config {
   constructor() {
   }
 }
-Config.restUrl = 'https://qzyapi.51urmaker.com/v1_1/';
+Config.restUrl = 'https://api.ddwolf.com/v1_1/';
 export { Config };
