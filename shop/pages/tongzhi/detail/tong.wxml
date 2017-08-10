@@ -1,8 +1,0 @@
-<view class="container">
-  <view class="list-item" style="border-bottom:1px solid  #F1F2F6"> 
-    <view class="time-ite">{{detail.title}}
-      <view class="time">{{detail.createTime}}</view>
-    </view>
-    <view class="intro1">{{detail.brief}}</view>
-  </view>
-</view>

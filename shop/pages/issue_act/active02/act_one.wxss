@@ -1,7 +1,0 @@
-/* pages/issue_act/active02/act_one.wxss */
-.other-font{
-  margin-top: 26rpx;
-  text-align:center;
-  margin-bottom: 106rpx;
-  
-}

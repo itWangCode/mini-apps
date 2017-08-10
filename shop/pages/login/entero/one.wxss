@@ -1,6 +1,0 @@
-/* one.wxss */
-@import '../ruzhu/ruzhu.wxss';
-.red{
- color:#ff0700;
-}
-.tipfonts{color:#ff2b2b;}
