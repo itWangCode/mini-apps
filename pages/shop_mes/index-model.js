@@ -29,7 +29,7 @@ class Shop extends Base {
     */
   uploadFiles(tempFilePaths, callBack) {
     let parames = {
-      url: 'https://qzyapi.51urmaker.com/v1_1/?service=FarmApply.setAvatar',
+      url: 'https://api.ddwolf.com/v1_1/?service=FarmApply.setAvatar',
       filePath: tempFilePaths,
       name: 'feedback',
       formData: {

@@ -20,7 +20,7 @@
         <view>核对{{usedCount}}人</view>
         </block>
         <block wx:else>
-         <view>{{pinNum}}人局缺{{pinNumHave}}人</view>
+         <view>{{pinNum}}人局缺{{quNum}}人</view>
         </block>
         <view class="me-wr">
           <text class="icon-me">¥</text>{{pinPrice}}

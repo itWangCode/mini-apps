@@ -19,9 +19,9 @@ Page({
       let gameNames = this.changeGe(usInfo.gameNames);
       let coverPic = usInfo.coverPic;//商铺照片   
       let coverPicArr = [];
-      if (coverPic != '') {
+      if (coverPic != '' && coverPic!=null) {
         coverPicArr = coverPic.split(',');
-      }
+      }       
       console.log(coverPicArr);
       this.setData({
         usInfo: usInfo,

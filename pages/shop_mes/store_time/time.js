@@ -25,7 +25,6 @@ Page({
       hasShow: true,
     }
     );
-
   },
 
   /**
@@ -35,7 +34,9 @@ Page({
     let [times, timee] = [options.times, options.timee];
     let data = times + '-' + timee;
     this.setData({
-      data: data
+      data: data,
+      times: times,
+      timee: timee
     });
   },
   /**
@@ -65,7 +66,9 @@ Page({
       console.log(times + 'timee' + timee);
       let data = times + '-' + timee;
       this.setData({
-        data: data
+        data: data,
+        times: times,
+        timee: timee
       });
     }
   },
@@ -77,14 +80,10 @@ Page({
     let fildName2 = 'business_time_e';
     let fildVale1 = this.data.times;
     let fildVale2 = this.data.timee;
-
     times.saveTime(farmId, fildName1, fildVale1, (res) => {
       if (res.code == 0) {
         times.saveTime(farmId, fildName2, fildVale2, (res) => {
           if (res.code == 0) {
-            wx.navigateBack({
-              delta: 1
-            });
             let pages = getCurrentPages();
             let prevPage = pages[pages.length - 2];  //上一个页面
             let firstPage = pages[pages.length - 3];  //上两页页面
@@ -95,9 +94,11 @@ Page({
             firstPage.setData({
               hasEdit: 1,
             });
+            wx.navigateBack({
+              delta: 1
+            });
           }
         });
-
       }
     });
 
