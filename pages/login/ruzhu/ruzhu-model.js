@@ -28,7 +28,7 @@ class Register extends Base {
     @param callBack:function 回调函数
     */
   uploadFiles(tempFilePaths, callBack) {
-    let parames = {
+    let parames = {   
       url: 'https://api.ddwolf.com/v1_1/?service=FarmApply.setAvatar',
       filePath: tempFilePaths,
       name: 'feedback',

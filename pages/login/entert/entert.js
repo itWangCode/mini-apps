@@ -32,7 +32,6 @@ Page({
       success: function (res) {
         console.log(res);
         let picPath = res.tempFilePaths;
-
         that.setData({
           picPath: picPath,
           hasPicZ: true,
@@ -43,16 +42,13 @@ Page({
 
   },
 
-  regFishR: function (e) {
-    console.log(wx.getStorageSync("storePic"));
-
+  regFishR: function (e) {   
     let ev = e.detail.value;
     let [CName, CCode, CAddress, CYear] = [ev.CName, ev.CCode, ev.CAddress, ev.CYear];
     /**
      表单验证
      */
     //验证照片  
-
     if (this.data.picBgZ) {
       wx.showModal({
         title: '',
@@ -138,6 +134,7 @@ Page({
       FPhoto: f_photo,
       CPhoto: c_photo
     }
+    console.log("parameters");
     Object.assign(parameters, addData1, addData2);
     console.log(parameters);
     entert.regStore(parameters, (res) => {

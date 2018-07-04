@@ -27,7 +27,7 @@ class Entert extends Base {
    */
   uploadFiles(tempFilePaths, callBack) {
     let parames = {
-      url: 'https://api.ddwolf.com/v1_1/v1_1/?service=FarmApply.setAvatar',
+      url: 'https://api.ddwolf.com/v1_1/?service=FarmApply.setAvatar',
       filePath: tempFilePaths,
       name: 'feedback',
       formData: {

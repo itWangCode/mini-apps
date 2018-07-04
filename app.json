@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/check/index",  
+    "pages/tixian/tixian",
+    "pages/mingxi/zhangdan",
+    "pages/login/login",
     "pages/shop_mes/store_time/time",
     "pages/shop_mes/store_address/address",
     "pages/index/index",
@@ -9,7 +11,6 @@
     "pages/shop_mes/store_name/name",
     "pages/mes_ping/fankui/fan",
     "pages/mes_ping/index",
-    "pages/mingxi/zhangdan",
     "pages/issue_act/active01/act_one",
     "pages/issue_act/active02/act_one",
     "pages/issue_act/activity",
@@ -26,7 +27,7 @@
     "pages/tongzhi/tong",
     "pages/my_order/index",
     "pages/other_act/index",
-    "pages/tixian/tixian",
+  
     "pages/tixian/detail/detail",
     "pages/tixian/detail/cashyu/yu",
     "pages/check/no/no"

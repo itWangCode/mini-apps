@@ -91,6 +91,7 @@ class Base {
       success: function (res) {
         let data = res.data;
         data = JSON.parse(data);
+        console.log(data);
         parames.sCallBack && parames.sCallBack(data);
       }
     });

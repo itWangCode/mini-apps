@@ -51,7 +51,7 @@ page {
 }
 
 .complete {
-  margin-top: 408rpx;
+  margin-top: 200rpx;
   background-color: #66b1ff;
   color: #fff;
   font-size: 36rpx;
